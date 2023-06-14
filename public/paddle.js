@@ -1,10 +1,20 @@
-class Paddle {
-    constructor(x, y) {
-        this.color = (29, 54, 78);
-        this.width = 20
-        this.height = 25
-        this.xspeed = 1
-        this.yspeed = 2
+class Paddle{
+    constructor(x,y){
+        this.x = x
+        this.y = y
+        this.w = 300
+        this.h = 50
+        this.xSpeed = 5
+
+        
     }
-}
-let paddle = new Paddle
+    show(){
+        rect(this.x,this.y,this.w,this.h)
+    
+    }
+    move(movement) {
+        this.x = this.x + (this.xSpeed * movement)
+    }
+    }
+
+
